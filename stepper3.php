@@ -1,7 +1,3 @@
-<?php include('includes/header.php'); ?>
-<?php include('includes/navbar.php'); ?>
-
-
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link rel="stylesheet" href="style.css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
@@ -77,12 +73,12 @@
                     <h3> Step 2</h3>
                     <div class="form-group">
                         <label class="control-label">Company Name</label>
-                        <input maxlength="200" type="text" class="form-control"
+                        <input maxlength="200" type="text" required="required" class="form-control"
                             placeholder="Enter Company Name" />
                     </div>
                     <div class="form-group">
                         <label class="control-label">Company Address</label>
-                        <input maxlength="200" type="text"  class="form-control"
+                        <input maxlength="200" type="text" required="required" class="form-control"
                             placeholder="Enter Company Address" />
                     </div>
                    
@@ -109,12 +105,12 @@
                     <h3> Step 3</h3>
                     <div class="form-group">
                         <label class="control-label">Company Name</label>
-                        <input maxlength="200" type="text" class="form-control"
+                        <input maxlength="200" type="text" required="required" class="form-control"
                             placeholder="Enter Company Name" />
                     </div>
                     <div class="form-group">
                         <label class="control-label">Company Address</label>
-                        <input maxlength="200" type="text"  class="form-control"
+                        <input maxlength="200" type="text" required="required" class="form-control"
                             placeholder="Enter Company Address" />
                     </div>
                     <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
@@ -128,12 +124,12 @@
                     <h3> Step 4</h3>
                     <div class="form-group">
                         <label class="control-label">Company Name</label>
-                        <input maxlength="200" type="text"  class="form-control"
+                        <input maxlength="200" type="text" required="required" class="form-control"
                             placeholder="Enter Company Name" />
                     </div>
                     <div class="form-group">
                         <label class="control-label">Company Address</label>
-                        <input maxlength="200" type="text"  class="form-control"
+                        <input maxlength="200" type="text" required="required" class="form-control"
                             placeholder="Enter Company Address" />
                     </div>
                     <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
