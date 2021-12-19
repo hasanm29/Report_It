@@ -1,8 +1,9 @@
-<?php include('includes/header.php'); ?>
-<?php include('includes/navbar.php'); ?>
-
-
-<?php include('includes/slider.php'); ?>
+<?php
+include('database/dbconfig.php');
+include('includes/header.php');
+include('includes/navbar.php');
+include('includes/slider.php');
+?>
 
 
 <div class="container py-5">
@@ -10,68 +11,95 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body ">
-                    
-                    <p class="w3-serif">What is sexual harassment? <br></p>
-                    <p class="w3-sans-serif">Sexual harassment is any kind of unwanted behaviour of a sexual nature that makes you feel humiliated or intimidated, violates your dignity or creates a hostile environment.  
+                    <?php
+                    $query = "SELECT * FROM homepage WHERE id=1";
+                    $query_run = mysqli_query($connection, $query);
+                    if (mysqli_num_rows($query_run) > 0) {
+                        while ($row = mysqli_fetch_assoc($query_run)) {
+                    ?>
 
-  
+                            <details>
+                                <summary>
+                                    <h6 class="d-inline-block ms-2""><?php echo $row['heading']; ?></h6>
+                                                            
+                </summary>
+                <hr>
+                <p class=" w3-sans-serif"><?php echo $row['description']; ?> </p>
+                            </details>
+                    <?php
 
-You don’t need to have previously objected to someone's behaviour for it to be considered unwanted.  
+                        }
+                    } else {
+                        echo "No Data Found";
+                    }
 
- 
 
-Sexual harassment can include:  
+                    ?>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body ">
+                    <?php
+                    $query = "SELECT * FROM homepage WHERE id=2";
+                    $query_run = mysqli_query($connection, $query);
+                    if (mysqli_num_rows($query_run) > 0) {
+                        while ($row = mysqli_fetch_assoc($query_run)) {
+                    ?>
 
-sexual comments or jokes  
+                            <details>
+                                <summary>
+                                    <h6 class="d-inline-block ms-2""><?php echo $row['heading']; ?></h6>
+            </summary>
+            <hr>
+            <p class=" w3-sans-serif"><?php echo $row['description']; ?> </p>
+                            </details>
+                    <?php
 
-physical behaviour, including unwelcome sexual advances, touching and various forms of sexual assault  
+                        }
+                    } else {
+                        echo "No Data Found";
+                    }
 
-displaying pictures, photos, or drawings of a sexual nature  
 
-sending emails or texts with a sexual content  
-
- 
-
-Sexual harassment can lead to anxiety, depression, and other problems such as difficulties sleeping.   
-
- 
-
-No matter what the situation is, sexual harassment is unacceptable and not your fault.   
-
- 
-
-If you have been subjected to unwanted sexual behaviour, you can find further advice here…. (Then provide link to advice section?)  
-
-</p>
+                    ?>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="card">
-                <div class="card-body">
-                    <h3>The first step to reach out for support will be different for everyone.
+                <div class="card-body ">
+                    <?php
+                    $query = "SELECT * FROM homepage WHERE id=3";
+                    $query_run = mysqli_query($connection, $query);
+                    if (mysqli_num_rows($query_run) > 0) {
+                        while ($row = mysqli_fetch_assoc($query_run)) {
+                    ?>
 
-                        You can speak to someone over the phone or chat to someone online by contacting the services
-                        listed below – you might want to contact one which feels right for you and your needs.
+                            <details>
+                                <summary>
+                                    <h6 class="d-inline-block ms-2""><?php echo $row['heading']; ?></h6>
+                                                            
+        </summary>
+        <hr>
+        <p class=" w3-sans-serif"><?php echo $row['description']; ?> </p>
+                            </details>
+                    <?php
 
-                    </h3>
-                </div>
-            </div>
-        </div>
+                        }
+                    } else {
+                        echo "No Data Found";
+                    }
 
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h3>Hello 1 </h3>
+
+                    ?>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
 <div class="container py-5">
     <div class="row">
         <div class="col-md-4">
@@ -82,26 +110,45 @@ If you have been subjected to unwanted sexual behaviour, you can find further 
             <button type="button" class="btn-lg btn-primary px-5 mid">Report With Details</button>
         </div>
         <div class="col-md-4">
-            <button type="button" class="btn-lg btn-primary px-5 mid">Share you experiance</button>
+            <button type="button" class="btn-lg btn-primary px-5 mid" data-mdb-toggle="modal" data-mdb-target="#shareexperience" data-mdb-whatever="@getbootstrap">
+                Share Your Experience
+            </button>
+
         </div>
     </div>
 
 
 </div>
-
-
 <div class="container">
     <div class="row">
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h3>Info</h3>
-                    <a href="First link">First linkFirst link</a><br>
 
-                    <a href="First link">First link</a><br>
-                    <a href="First link">First link</a><br>
-                    <a href="First link">First link</a><br>
-                    <a href="First link">First link</a><br>
+
+                    <div>
+                        <h3 class="d-inline-block ms-2">Info</h3>
+                    </div>
+                    <?php
+                    $query = "SELECT * FROM homepagelinks WHERE id BETWEEN 1 AND 3";
+                    $query_run = mysqli_query($connection, $query);
+                    if (mysqli_num_rows($query_run) > 0) {
+                        while ($row = mysqli_fetch_assoc($query_run)) {
+                    ?>
+                            <div>
+                                <a href="First link"><?php echo $row['link']; ?></a><br>
+                            </div>
+
+                    <?php
+
+                        }
+                    } else {
+                        echo "No Data Found";
+                    }
+
+
+                    ?>
+
                 </div>
             </div>
         </div>
@@ -109,13 +156,31 @@ If you have been subjected to unwanted sexual behaviour, you can find further 
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h3>Info</h3>
-                    <a href="First link">First linkFirst link</a><br>
 
-                    <a href="First link">First link</a><br>
-                    <a href="First link">First link</a><br>
-                    <a href="First link">First link</a><br>
-                    <a href="First link">First link</a><br>
+
+                    <div>
+                        <h3 class="d-inline-block ms-2">Info</h3>
+                    </div>
+                    <?php
+                    $query = "SELECT * FROM homepagelinks WHERE id BETWEEN 4 AND 6";
+                    $query_run = mysqli_query($connection, $query);
+                    if (mysqli_num_rows($query_run) > 0) {
+                        while ($row = mysqli_fetch_assoc($query_run)) {
+                    ?>
+                            <div>
+                                <a href="First link"><?php echo $row['link']; ?></a><br>
+                            </div>
+
+                    <?php
+
+                        }
+                    } else {
+                        echo "No Data Found";
+                    }
+
+
+                    ?>
+
                 </div>
             </div>
         </div>
@@ -123,21 +188,75 @@ If you have been subjected to unwanted sexual behaviour, you can find further 
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h3>Info</h3>
-                    <a href="First link">First linkFirst link</a><br>
 
-                    <a href="First link">First link</a><br>
-                    <a href="First link">First link</a><br>
-                    <a href="First link">First link</a><br>
-                    <a href="First link">First link</a><br>
+
+                    <div>
+                        <h3 class="d-inline-block ms-2">Info</h3>
+                    </div>
+                    <?php
+                    $query = "SELECT * FROM homepagelinks WHERE id BETWEEN 7 AND 9";
+                    $query_run = mysqli_query($connection, $query);
+                    if (mysqli_num_rows($query_run) > 0) {
+                        while ($row = mysqli_fetch_assoc($query_run)) {
+                    ?>
+                            <div>
+                                <a href="First link"><?php echo $row['link']; ?></a><br>
+                            </div>
+
+                    <?php
+
+                        }
+                    } else {
+                        echo "No Data Found";
+                    }
+
+
+                    ?>
+
                 </div>
             </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Share your experiance Model -->
+<div class="modal fade" id="shareexperience" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+               
+            </div>
+
+            <form action="code.php" method="POST">
+                <div class="modal-body">
+
+                    <div class="mb-3 form-group">
+                        <label>Anonymous Name</label>
+                        <input type="text" name="name" class="form-control" placeholder="Anonymous Name" />
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label>Incident Location</label>
+                        <input type="text" name="location" class="form-control" placeholder="Incident Location" />
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label>Message</label>
+                        <input type="text" name="message" class="form-control" placeholder="Type Your experience" />
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" name="sharebtn" class="btn btn-primary">Send Message</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
 
 
-
-
-
-<?php include('includes/footer.php'); ?>
+<?php
+include('includes/footer.php');
+?>
