@@ -136,7 +136,7 @@ include('includes/slider.php');
                         while ($row = mysqli_fetch_assoc($query_run)) {
                     ?>
                             <div>
-                                <a href="First link"><?php echo $row['link']; ?></a><br>
+                               <a href="https://www.rasasc.org.uk/" target="_blank">www.rasasc.org.uk</a><br>
                             </div>
 
                     <?php
@@ -168,7 +168,7 @@ include('includes/slider.php');
                         while ($row = mysqli_fetch_assoc($query_run)) {
                     ?>
                             <div>
-                                <a href="First link"><?php echo $row['link']; ?></a><br>
+                                <a href="https://www.thehavens.org.uk/" target="_blank">www.thehavens.org.uk</a><br>
                             </div>
 
                     <?php
@@ -200,7 +200,7 @@ include('includes/slider.php');
                         while ($row = mysqli_fetch_assoc($query_run)) {
                     ?>
                             <div>
-                                <a href="First link"><?php echo $row['link']; ?></a><br>
+                                <a href="https://www.met.police.uk/advice/advice-and-information/rsa/rape-and-sexual-assault/" target="_blank">www.met.police.uk</a><br>
                             </div>
 
                     <?php
