@@ -103,19 +103,21 @@ include('includes/slider.php');
 <div class="container py-5">
     <div class="row">
         <div class="col-md-4">
-            <button type="button" class="btn-lg btn-primary px-5" name="report_button" style="sty.css">Report
-                Anonymously</button>
+            <!-- <button type="button" class="btn-lg btn-primary px-5" name="report_button">Report Anonymously</button> -->
+            <a href="reportana.php" type="button" class="btn btn-lg btn-primary px-5 mid" name="an_button">Anonymous Report</a> 
         </div>
         <div class="col-md-4">
-            <button type="button" class="btn-lg btn-primary px-5 mid">Report With Details</button>
+            <!-- <button type="button" class="btn-lg btn-primary px-5 mid">Report With Details</button> -->
+            <a href="reportdetails.php" type="button" class="btn btn-lg btn-primary px-5 mid" name="an_button"> Report with details</a>
         </div>
         <div class="col-md-4">
-            <button type="button" class="btn-lg btn-primary px-5 mid" data-mdb-toggle="modal" data-mdb-target="#shareexperience" data-mdb-whatever="@getbootstrap">
-                Share Your Experience
+            <button type="button" class="btn btn-lg btn-primary px-5 mid" data-mdb-toggle="modal" data-mdb-target="#shareexperience" data-mdb-whatever="@getbootstrap">
+                SHARE YOUR EXPERIENCE
             </button>
 
         </div>
     </div>
+</div>
 
 
 </div>
@@ -227,23 +229,29 @@ include('includes/slider.php');
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">New message</h5>
                 <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-               
+
             </div>
 
             <form action="code.php" method="POST">
                 <div class="modal-body">
 
                     <div class="mb-3 form-group">
-                        <label>Anonymous Name</label>
-                        <input type="text" name="name" class="form-control" placeholder="Anonymous Name" />
+                        <label class="py-2"><strong>Anonymous Name</strong></label>
+                        <input type="text" name="name" class="form-control " placeholder="Anonymous Name" />
                     </div>
                     <div class="mb-3 form-group">
-                        <label>Incident Location</label>
-                        <input type="text" name="location" class="form-control" placeholder="Incident Location" />
+                        <label class="py-2"><strong>Incident Location</strong></label>
+                        <select type="text" name="location" class="form-control select" placeholder="Incident Location" >
+                            <option value="On Campus">On the Campus</option>
+                            <option value="Outside Campus">Outside Campus</option>
+                            <option value="At Home">At Home</option>
+                            <option value="Other">Other</option>
+                        </select>
                     </div>
+                    <!-- Message input -->
                     <div class="mb-3 form-group">
-                        <label>Message</label>
-                        <input type="text" name="message" class="form-control" placeholder="Type Your experience" />
+                    <label class="py-2"><strong>Message</strong></label>
+                        <textarea type="text" id="message" name="message" class="form-control" placeholder="Type Your experience" onChange="removeChar();" rows="4"></textarea>
                     </div>
 
                 </div>
@@ -256,6 +264,13 @@ include('includes/slider.php');
     </div>
 </div>
 
+<script>
+    function removeChar() {
+        var a = document.getElementById("message").value;
+        a = a.trim().replace(/'( )?/g, '');
+        document.getElementById("message").value = a;
+    }
+</script>
 
 <?php
 include('includes/footer.php');
