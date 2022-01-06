@@ -1,3 +1,9 @@
+
+.report_button{
+  width: 100%;
+  min-width: 0;
+  max-width: 80%;
+}
 body{ 
   margin-top:40px; 
 }
@@ -48,12 +54,3 @@ font-size: 12px;
 line-height: 1.428571429;
 border-radius: 15px;
 }
-
- /* HTML Details Tag start in the HomePage */
-details > summary {
-  list-style: none;
-}
-details > summary::-webkit-details-marker {
-  display: none;
-}
- /* HTML Details Tag ends in the HomePage */
