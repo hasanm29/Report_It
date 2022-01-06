@@ -190,6 +190,7 @@ include('includes/navbar.php');
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 <div class="container">
     <div class="row">
     <div class="px-4 py-4 d-flex align-items-center justify-content-center">
@@ -197,6 +198,10 @@ include('includes/navbar.php');
         </div>
         <hr>
     </div>
+=======
+
+
+>>>>>>> main
 </div>
 <div class="container">
     <div class="row">
@@ -210,6 +215,28 @@ include('includes/navbar.php');
                         
                         <p>Women's Aid Helpline - <b>0808 2000 247</b></p>
                     </div>
+<<<<<<< HEAD
+=======
+                    <?php
+                    $query = "SELECT * FROM homepagelinks WHERE id BETWEEN 1 AND 3";
+                    $query_run = mysqli_query($connection, $query);
+                    if (mysqli_num_rows($query_run) > 0) {
+                        while ($row = mysqli_fetch_assoc($query_run)) {
+                    ?>
+                            <div>
+                               <a href="https://www.rasasc.org.uk/" target="_blank">www.rasasc.org.uk</a><br>
+                            </div>
+
+                    <?php
+
+                        }
+                    } else {
+                        echo "No Data Found";
+                    }
+
+
+                    ?>
+>>>>>>> main
 
                 </div>
             </div>
@@ -225,6 +252,28 @@ include('includes/navbar.php');
                         
                         <p>Rape Crisis Helpline - <b> 0808 802 9999</b></p>
                     </div>
+<<<<<<< HEAD
+=======
+                    <?php
+                    $query = "SELECT * FROM homepagelinks WHERE id BETWEEN 4 AND 6";
+                    $query_run = mysqli_query($connection, $query);
+                    if (mysqli_num_rows($query_run) > 0) {
+                        while ($row = mysqli_fetch_assoc($query_run)) {
+                    ?>
+                            <div>
+                                <a href="https://www.thehavens.org.uk/" target="_blank">www.thehavens.org.uk</a><br>
+                            </div>
+
+                    <?php
+
+                        }
+                    } else {
+                        echo "No Data Found";
+                    }
+
+
+                    ?>
+>>>>>>> main
 
                 </div>
             </div>
@@ -240,6 +289,28 @@ include('includes/navbar.php');
                         
                         <p>Victim Support Helpline - <b>0845 30 30 900 </b></p>
                     </div>
+<<<<<<< HEAD
+=======
+                    <?php
+                    $query = "SELECT * FROM homepagelinks WHERE id BETWEEN 7 AND 9";
+                    $query_run = mysqli_query($connection, $query);
+                    if (mysqli_num_rows($query_run) > 0) {
+                        while ($row = mysqli_fetch_assoc($query_run)) {
+                    ?>
+                            <div>
+                                <a href="https://www.met.police.uk/advice/advice-and-information/rsa/rape-and-sexual-assault/" target="_blank">www.met.police.uk</a><br>
+                            </div>
+
+                    <?php
+
+                        }
+                    } else {
+                        echo "No Data Found";
+                    }
+
+
+                    ?>
+>>>>>>> main
 
                 </div>
             </div>
@@ -297,8 +368,11 @@ include('includes/navbar.php');
         document.getElementById("message").value = a;
     }
 </script>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> main
 
 <?php
 include('includes/footer.php');
