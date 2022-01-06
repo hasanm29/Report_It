@@ -1,5 +1,6 @@
 <?php
 include('security.php');
+
 include('includes/header.php');
 include('includes/navbar.php');
 ?>
@@ -34,7 +35,7 @@ include('includes/navbar.php');
                         <label> Confirm Password </label>
                         <input type="password" name="confirmpassword" class="form-control" placeholder="Enter Confirmed Password">
                     </div>
-                    <input type="hidden" name="usertype" value="admin">
+                    <input type="hidden" name="usertype" value="Admin">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

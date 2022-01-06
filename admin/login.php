@@ -40,22 +40,22 @@ include('includes/header.php');
                                     <div class="form-group">
                                         <input type="password" name="password" class="form-control form-control-user" placeholder="Password">
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <div class="custom-control custom-checkbox small">
                                             <input type="checkbox" class="custom-control-input" id="customCheck">
                                             <label class="custom-control-label" for="customCheck">Remember
                                                 Me</label>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <button type="submit" name="login_btn" class="btn btn-primary btn-user btn-block"> Login </button>
 
 
-                                    <hr>
+                                    <!-- <hr>
                                     <a href="" class="btn btn-google btn-user btn-block">
                                         <i class="fab fa-google fa-fw"></i> Login with Google
-                                    </a>
+                                    </a> -->
                                 </form>
-                                <hr>
+                                <!-- <hr> -->
 
 
 

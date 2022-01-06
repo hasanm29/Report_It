@@ -39,6 +39,14 @@ include('includes/navbar.php');
                             <label> Password </label>
                             <input type="password" name="edit_password" value="<?php echo $row['password'] ?>" class="form-control" placeholder="Enter Password">
                         </div>
+                        <div class="form-group">
+                            <label> UserType </label>
+                            <select name="edit_usertype" class="form-control">
+                                <option value="Admin">Admin</option>
+                                <option value="User">User</option>
+                            </select>
+
+                        </div>
                         <a href="register.php" class="btn btn-danger">CANCEL</a>
                         <button type="submit" name="updatebtn" class="btn btn-primary">Update</button>
                     </form>
