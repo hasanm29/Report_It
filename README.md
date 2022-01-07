@@ -21,5 +21,7 @@ Moreover, to have access to database, the database file has to be used after cre
 
 Finally, localhost, database name, password details might need to be modified which can be found in the "admin/database/dbconfig.php" and "main/database/dbconfig.php" folder.
 
-A final version of the website for the user can be viewed from the ## [Report_It Website](https://courseworkreport.000webhostapp.com/)
+A final version of the website for the user can be viewed from the [Report_It Website](https://courseworkreport.000webhostapp.com/)
+
+The poster of the project can found : [Report_It Poster](https://app.luminpdf.com/viewer/61d83c4c0207be0019cb8171/)
 
